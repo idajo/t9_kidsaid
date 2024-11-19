@@ -1,3 +1,44 @@
-* :root {
-  background: var(--gradient, linear-gradient(180deg, #024b78 10.67%, #035e96 33.17%, #7fa8bb 68.67%, rgba(89, 85, 177, 0.92) 88.67%));
+:root {
+  --primary-background: var(--gradient, linear-gradient(360deg, #024b78 10.67%, #035e96 33.17%, #7fa8bb 68.67%, rgba(89, 85, 177, 0.92) 88.67%));
+  --primary-text: #faf3e0;
+
+  --secondary-color: #035e96;
+  --accent-color: #fe500d;
+  --brown: #b6946f;
+
+  --font-curve: "Curve", serif;
+  --font-fira-sans: "fira-sans extra condensed", sans-serif;
+}
+/* fonts */
+h1 {
+  font-family: "curve", serif;
+  font-weight: 70px;
+  font-style: normal;
+}
+h2 {
+  font-family: "curve", serif;
+  font-weight: 70px;
+  font-style: normal;
+}
+* body {
+  background: var(--primary-background);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: var(--primary-text);
+}
+
+h1 {
+}
+/* Scrollbar oppe i header */
+.progress-container {
+  position: fixed;
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+.progress-bar {
+  position: fixed;
+  height: 8px;
+  background: hotpink;
+  width: 0%;
 }

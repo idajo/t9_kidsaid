@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import "../components/Button.astro";
 ---
 
 <html lang="da">
@@ -8,18 +9,73 @@ import "../styles/style.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://use.typekit.net/cjp3snc.css">
 		<title>Astro</title>
 	</head>
-	
+
 	<body>
+		 <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
 		<header>
+			<h1>MagiLommen
+			</h1>
+			<h3>Vi er et magisk rum, for sårbare børn og deres familier, som skaber mindeværdige og magiske øjeblikke.</h3>
+<p>For at kunne hjælpe så mange syge børn og familier som muligt, afvikler vi en masse projekter, events og arrangementer. Her samler vi ind til store årlige begivenheder og små magiske øjeblikke i hverdagen. 
+
+Læs mere om projektet her og vær med til at gøre en forskel, ved at give din støtte.</p>
+			<slot />	
 		</header>
+
 		<main>
-			<section></section>
-			<section></section>
-			<section></section>
+			
+			<section>
+				<h2>Mød MagiLommens Tryllekunstnere</h2>
+				<h4>MagiLommens tryllekunstnere, skaber magiske øjeblikke for syge børn, hver dag i hele landet.  </h4>
+				<p>Tryk på de forskellige kort for at læse mere om de forskellige tryllekunstnere og deres univers og hvordan de hver dag skaber oplevelser for sårbare børn, når børnene skal stikkes, have kemo eller blot har brug for en støtte. </p>
+			<div class="cards">
+
+			</div>
+			</section>
+			<section>
+				<h2>MagiLommens Magiske Fortællinger</h2>
+				<p>Når et barn bliver syg, rammer det hele familien. Derfor har vi altid fokus på at hjælpe de pårørende, i lige så høj grad som deres børn. MagiLommen samler hele familien, omkring mindeværdige, unikke oplevelser og events, så familien og de syge børn for en stund, kan nyde livets magiske øjeblikke sammen.</p>
+			<div class="magiskbilleder">
+
+			</div>
+			<div class="kvotemark">
+
+			</div>
+			<h1>“Igår havde jeg mindre energi, og det havde tryllekunstnerne fornemmet. De lavede et show der passede til mine behov i øjeblikket, og gav min dag lidt magi i mørket. </h1>
+			<p>Louise 12 år - indlagt på Rigshospitalet</p>
+			</section>
+			<section>
+				<h2>Vil du være med til at gøre en forskel</h2>
+				<p>Vi har brug for jeres hjælp til at skabe endnu flere magiske øjeblikke, for syge og sårbare børn og deres familier. Alle donationer gør en forskel. </p>
+			<div class="button">
+				<slot />
+			</div>
+
+			</section>
+			<section>
+				<h2>Det gik pengene til</h2>
+				<p>Vi fik indsamlet 13 millioner, som har været med til at gøre en forskel for organisationen og børnene og deres familier. </p>
+				
+			</section>
 		</main>
 		<footer></footer>
 		
 	</body>
 </html>
+<script>
+	window.addEventListener("scroll", onScroll);
+
+function onScroll() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+</script>
